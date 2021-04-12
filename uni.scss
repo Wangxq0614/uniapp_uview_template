@@ -1,6 +1,7 @@
 /* uni.scss */
 @import 'uview-ui/theme.scss';
 /* 颜色变量 */
+$uni-base-color:#007aff;
 
 /* 行为相关颜色 */
 $uni-color-primary: #007aff;
@@ -43,14 +44,14 @@ $uni-border-radius-lg: 12rpx;
 $uni-border-radius-circle: 50%;
 
 /* 水平间距 */
-$uni-spacing-row-sm: 10px;
+$uni-spacing-row-sm: 10rpx;
 $uni-spacing-row-base: 20rpx;
-$uni-spacing-row-lg: 30rpx;
+$uni-spacing-row-lg: 40rpx;
 
 /* 垂直间距 */
-$uni-spacing-col-sm: 8rpx;
-$uni-spacing-col-base: 16rpx;
-$uni-spacing-col-lg: 24rpx;
+$uni-spacing-col-sm: 10rpx;
+$uni-spacing-col-base: 20rpx;
+$uni-spacing-col-lg: 40rpx;
 
 /* 透明度 */
 $uni-opacity-disabled: 0.3; // 组件禁用态的透明度
