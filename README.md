@@ -3,8 +3,6 @@
 #### 介绍
 uniapp + uview模板
 
-
-
 #### 安装教程
 
 git clone https://gitee.com/wangxq0614/uniApp_uview_template.git

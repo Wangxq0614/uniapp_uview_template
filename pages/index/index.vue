@@ -14,7 +14,21 @@ export default {
   data() {
     return {};
   },
-  methods: {},
+  onLoad(){
+    // 使用api
+    const result = await this.$u.api.login()
+
+    // 使用路由跳转
+    this.$u.route({
+			url: 'pages/components/empty/index',
+			params: {
+				name: 'lisa'
+			}
+		})
+  },
+  methods: {
+   
+  },
 };
 </script>
 

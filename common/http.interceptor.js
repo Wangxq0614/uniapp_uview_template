@@ -7,12 +7,14 @@ const install = (Vue, vm) => {
 		loadingText: "努力加载中~",
 		loadingTime: 800,
 	});
+
 	// 请求拦截部分，如配置，每次请求前都会执行
 	Vue.prototype.$u.http.interceptor.request = (config) => {
 		// 从本地存储中获取token
 		const token = uni.getStorageSync('token');
 		config.header.token = token;
 	};
+	
 	// 响应拦截，如配置，每次请求结束都会执行本方法
 	Vue.prototype.$u.http.interceptor.response = (res) => {
 		if (res.code == 200) {
