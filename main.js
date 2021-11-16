@@ -1,21 +1,20 @@
 import Vue from "vue";
 import App from "./App";
 
-import uView from "uview-ui";
-Vue.use(uView);
+
 Vue.config.productionTip = false;
 
 App.mpType = "app";
 
+// 引入uView
+import uView from '@/uni_modules/uview-ui'
+Vue.use(uView)
+
 const app = new Vue({
   ...App,
 });
-// http拦截器，将此部分放在new Vue()和app.$mount()之间，才能App.vue中正常使用
-import httpInterceptor from "@/common/http.interceptor.js";
-Vue.use(httpInterceptor, app);
+// 引入请求封装，将app参数传递到配置中
+require('@/config/request.js')(app)
 
-// http接口API集中管理引入部分
-import httpApi from "@/common/http.api.js";
-Vue.use(httpApi, app);
 
 app.$mount();

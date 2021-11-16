@@ -1,35 +1,44 @@
 <template>
-  <view class="home">
-    <u-button>默认按钮</u-button>
-    <u-button type="primary">主要按钮</u-button>
-    <u-button type="success">成功按钮</u-button>
-    <u-button type="info">信息按钮</u-button>
-    <u-button type="warning">警告按钮</u-button>
-    <u-button type="error">危险按钮</u-button>
-  </view>
+	<view class="home">
+		<view style="padding: 20px;">
+				<u-button type="primary">确定</u-button>
+				<u-button type="primary" icon="map">图标按钮</u-button>
+				<u-button type="primary" shape="circle">按钮形状</u-button>
+				<u-button text="渐变色按钮" color="linear-gradient(to right, rgb(66, 83, 216), rgb(213, 51, 186))"></u-button>
+				<u-button type="primary" size="small">大小尺寸</u-button>
+			</view>
+		<u-list >
+			<u-list-item v-for="(item, index) in list" :key="index">
+				<u-cell :title="item.text"></u-cell>
+			</u-list-item>
+		</u-list>
+	</view>
 </template>
 
 <script>
-export default {
-  data() {
-    return {};
-  },
-  onLoad(){
-    // 使用api
-    const result = await this.$u.api.login()
-
-    // 使用路由跳转
-    this.$u.route({
-			url: 'pages/components/empty/index',
-			params: {
-				name: 'lisa'
-			}
-		})
-  },
-  methods: {
-   
-  },
-};
+	import { getList } from '@/config/api';
+	export default {
+		data() {
+			return {
+				list: []
+			};
+		},
+		onLoad() {
+			this.getList()
+		},
+		methods: {
+			async getList() {
+				const { result } = await getList({
+					page: 1,
+					count: 1,
+					type: 'video'
+				})
+				this.list = result
+				console.log(result);
+			},		
+			
+		},
+	};
 </script>
 
 <style lang="scss" scoped>
