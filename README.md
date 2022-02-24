@@ -1,5 +1,7 @@
 # uniApp  + uview
 
+#### 【推荐下载1.0版本】
+
 #### 介绍
 uniapp + uview模板
 
