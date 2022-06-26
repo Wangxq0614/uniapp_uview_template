@@ -15,10 +15,10 @@ npm install
 
 HBuilder运行
 
-#### 自定义组件
+#### 仓库地址
 
-##### 登录鉴权按钮组件
-##### 自定义上传组件
+##### GitHub https://github.com/Wangxq0614/uniapp_uview_template.git
+##### 码云  https://gitee.com/wangxq0614/uniApp_uview_template.git
 
 #### 使用说明
 
